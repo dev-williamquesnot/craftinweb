@@ -1,0 +1,209 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Pricing',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Pricing"
+    title="Our Pricing Packages"
+    subtitle="Select the ideal package that matches your digital ambitions."
+  />
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    title="Packages"
+    subtitle="Customized Pricing for Your Unique Needs: Our pricing model is designed to perfectly match your requirements. Whether you're looking for a compact 5-page website or a more extensive 10-page one, our pricing adapts to suit your specific needs. This means that if you opt for a smaller website with 5 pages, your investment will naturally be lower compared to a larger 10-page website. We believe in offering tailored solutions that align precisely with your goals and budget, ensuring you receive the optimal value for your investment."
+    prices={[
+      {
+        title: 'E-commerce site',
+        subtitle: 'Sell products or services online',
+        price: 1500,
+        period: 'Per Month',
+        items: [
+          {
+            description: 'E-commerce functionality with CMS integration (Shopify)',
+          },
+          {
+            description: 'Basic support and maintenance',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+      },
+      {
+        title: 'Showcase Site',
+        subtitle: 'Present the business, services',
+        price: 500,
+        period: 'One-time payment',
+        items: [
+          {
+            description: 'Responsive and clean design',
+          },
+          {
+            description: 'Fast-loading pages and basic SEO to boost your visibility',
+          },
+          {
+            description: 'Hosting setup (optional)',
+          },
+          {
+            description: 'Blog setup (optional)',
+          },
+          {
+            description: 'Basic support and maintenance',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'CUSTOM SOLUTION',
+        subtitle: 'Deliver bespoke digital solutions tailored to unique business requirements',
+        price: '2500',
+        period: 'Per Month',
+        items: [
+          {
+            description: 'Fully customized website design and development',
+          },
+          {
+            description: 'Advanced feature integration (APIs, CRM, custom database)',
+          },
+          {
+            description: 'Personalized user experience (UX) design',
+          },
+          {
+            description: 'High-level security features',
+          },
+          {
+            description: 'Comprehensive SEO and digital marketing strategy',
+          },
+          {
+            description: 'Advanced support and maintenance',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Contact us',
+          href: '#',
+        },
+      },
+    ]}
+  />
+
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Your Website Creation Journey"
+    tagline="A Step-by-Step Process"
+    isReversed={true}
+    items={[
+      {
+        title: 'Initial Consultation',
+        description: 'Schedule a meeting with the client to discuss project requirements, goals, and preferences.',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Proposal Submission',
+        description: 'Submit a detailed proposal outlining project scope, timeline, and cost for client approval.',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Design and Development',
+        description:
+          'Design and develop the website based on agreed-upon specifications, incorporating client feedback throughout the process.',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Content Integration',
+        description: 'Integrate client-provided content such as text, images, and videos into the website.',
+        icon: 'tabler:number-4',
+      },
+      {
+        title: 'Testing and Review',
+        description:
+          'Thoroughly test the website for functionality, compatibility, and performance, and review with the client for feedback.',
+        icon: 'tabler:number-5',
+      },
+      {
+        title: 'Client Approval and Launch',
+        description: 'Obtain final approval from the client and launch the website for public access.',
+        icon: 'tabler:number-6',
+      },
+      {
+        title: 'Training and Support',
+        description:
+          'Provide training to the client on how to manage and update the website, and offer ongoing support as needed.',
+        icon: 'tabler:number-7',
+      },
+    ]}
+    image={{
+      src: 'https://files.oaiusercontent.com/file-zV63BXal2k3UyB5h2OT7uZw9?se=2024-04-01T17%3A11%3A05Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D7ffbcd53-f258-49d8-aee3-27b655f5ea64.webp&sig=qitmsPfyHF2crVV/WdQJOr6ttXZymnrM3/GBet0klDU%3D',
+      alt: 'Website Creation Journey image',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Pricing FAQs"
+    subtitle="Choosing the right plan is important, and we're here to answer your questions. If you have queries about our pricing options, you're in the right place."
+    columns={1}
+    items={[
+      {
+        title: 'What factors determine the pricing of your plans?',
+        description:
+          'Our pricing is determined based on factors such as the features included, the number of pages or products, customization requirements, and additional services.',
+      },
+      {
+        title: 'Do you offer discounts for long-term subscriptions?',
+        description:
+          'Yes, we offer discounts for customers who opt for long-term subscriptions. You can save up to [X]% by committing to an annual subscription.',
+      },
+      {
+        title: 'Can I request a custom plan tailored to my specific needs?',
+        description:
+          "Absolutely! We understand that every business is unique, and we're happy to create a custom plan that aligns perfectly with your requirements. Simply get in touch with our team to discuss your needs.",
+      },
+      {
+        title: 'Who will pay for the hosting fees?',
+        description:
+          'The hosting fees will be the responsibility of the client. We can assist you in selecting a suitable hosting plan and setting it up if needed.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Ready to supercharge your projects?"
+    subtitle="Choose one of our tailored packages and unlock the full potential of your projects today."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Explore Packages',
+        href: '/pricing',
+      },
+    ]}
+  />
+</Layout>

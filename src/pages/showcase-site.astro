@@ -1,0 +1,83 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Services',
+};
+
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Services"
+    title="Showcase Site"
+    subtitle="Display your work elegantly with our stunning templates."
+    actions={[{ variant:"primary", target: '_blank', text: 'Collaborate now', href: '/' }]}
+   
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Why Choose Showcase Site?"
+    subtitle="Discover the key features of our showcase site service."
+    columns={3}
+    items={[
+      {
+        title: 'Responsive and Clean Design',
+        description:
+          'Ensuring your website is visually appealing and accessible across various devices with a clean and responsive design.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Fast-Loading Pages and Basic SEO',
+        description:
+          'Optimizing your website for fast loading times and implementing basic SEO techniques to improve visibility on search engines.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Hosting Setup (Optional)',
+        description:
+          'Assisting with the setup of hosting services to ensure your website is accessible online (optional service).',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Blog Setup (Optional)',
+        description:
+          'Setting up a blog section on your website to enable regular content publishing and engagement with your audience (optional service).',
+        icon: 'tabler:rss',
+      },
+      {
+        title: 'Basic Support and Maintenance',
+        description:
+          'Providing basic support and maintenance services to address any issues and ensure your website functions smoothly.',
+        icon: 'tabler:tools',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  
+
+
+  <CallToAction
+    title="Ready to supercharge your projects?"
+    subtitle="Choose one of our tailored packages and unlock the full potential of your projects today."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Explore Packages',
+        href: '/pricing',
+      },
+    ]}
+  />
+
+</Layout>

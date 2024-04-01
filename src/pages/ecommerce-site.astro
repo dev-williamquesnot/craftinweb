@@ -1,0 +1,59 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Services',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Services"
+    title="E-commerce Solutions"
+    subtitle="Unlock the potential of your online store with our e-commerce solutions."
+    actions={[{ variant:"primary", target: '_blank', text: 'Collaborate now', href: '/' }]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+  title="Why Choose E-commerce Solutions?"
+  subtitle="Discover the key features of our e-commerce solution service."
+  columns={2}
+  items={[
+    {
+      title: 'E-commerce Functionality with CMS Integration',
+      description:
+        'Leverage the power of e-commerce functionality integrated with a Content Management System (CMS), such as Shopify, for seamless management of your online store content.',
+      icon: 'flat-color-icons:template',
+    },
+    {
+      title: 'Basic Support and Maintenance',
+      description:
+        'Receive basic support and maintenance services to ensure the smooth operation of your e-commerce platform.',
+      icon: 'flat-color-icons:template',
+    },
+  ]}
+/>
+
+
+  <CallToAction
+    title="Ready to supercharge your online store?"
+    subtitle="Choose one of our tailored packages and unlock the full potential of your e-commerce business today."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Explore Packages',
+        href: '/pricing',
+      },
+    ]}
+  />
+
+</Layout>

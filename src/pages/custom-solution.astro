@@ -1,0 +1,84 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Services',
+};
+
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Services"
+    title="Custom Solution"
+    subtitle="Deliver bespoke digital solutions tailored to unique business requirements."
+    actions={[{ variant:"primary", target: '_blank', text: 'Collaborate now', href: '/' }]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Why Choose Custom Solution?"
+    subtitle="Discover the key features of our custom solution service."
+    columns={3}
+    items={[
+      {
+        title: 'Fully Customized Design and Development',
+        description:
+          'Tailored website design and development to align perfectly with your unique business needs and objectives.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Advanced Feature Integration',
+        description:
+          'Seamless integration of advanced features such as APIs, CRM systems, and custom databases to enhance functionality.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Personalized User Experience (UX) Design',
+        description:
+          'Crafting a personalized and intuitive user experience through thoughtful UX design tailored to your target audience.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'High-Level Security Features',
+        description:
+          'Implementation of robust security measures to safeguard your digital assets and protect against cyber threats.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Comprehensive SEO and Digital Marketing Strategy',
+        description:
+          'Developing and executing a comprehensive SEO and digital marketing strategy to maximize online visibility and drive growth.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Advanced Support and Maintenance',
+        description:
+          'Ongoing support and maintenance services to ensure your digital solution remains optimized and up-to-date.',
+        icon: 'flat-color-icons:template',
+      },
+    ]}
+  />
+
+
+  <CallToAction
+    title="Ready to supercharge your projects?"
+    subtitle="Choose one of our tailored packages and unlock the full potential of your projects today."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Explore Packages',
+        href: '/pricing',
+      },
+    ]}
+  />
+
+</Layout>

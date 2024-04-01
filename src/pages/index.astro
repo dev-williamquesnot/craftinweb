@@ -1,0 +1,178 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'CraftinWeb - Web Agency',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Collaborate Now',
+        href: 'https://github.com/onwidget/CraftinWeb',
+        target: '_blank',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{ src: 'https://files.oaiusercontent.com/file-MEQOI1QAOmU1ENIodlzSonIw?se=2024-04-01T17%3A13%3A17Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Db7e6bf76-9e57-45d1-b987-7ec78b125c60.webp&sig=BT5MxdOtZs55p%2BE%2BVLcn5XQ1suB9vhzRlEQIsraV06A%3D', alt: 'CraftinWeb Hero Image' }}
+  >
+    <Fragment slot="title">
+      Crafting Your Path to <span class="hidden xl:inline">Online Excellence through</span>
+      Innovative Website with <span class="text-accent dark:text-white highlight">CraftinWeb</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">CraftinWeb</span> specializes in crafting innovative websites that pave the way for your
+        online excellence. Our team is dedicated to creating tailored solutions that captivate audiences and drive your business
+        forward. Explore how CraftinWeb can transform your digital presence into a beacon of success</span
+      >
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What you get with CraftinWeb"
+    subtitle="CraftinWeb offers one of the most professional and comprehensive web development services currently on the market. Let us craft your online presence with expertise and innovation."
+    items={[
+      {
+        title: 'CraftinWeb Custom Solutions',
+        description:
+          'CraftinWeb specializes in crafting custom web solutions tailored to your unique needs and requirements. Our expertise ensures high productivity, performance, and versatility.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Ready-to-use Components',
+        description:
+          "CraftinWeb offers a range of ready-to-use components crafted with precision using Tailwind CSS. Whether it's for Marketing Websites, SaaS, Blogs, Personal Profiles, or Small Businesses, we have you covered.",
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Best Practices',
+        description:
+          'At CraftinWeb, we adhere to best practices in web development, ensuring secure, efficient, and user-friendly websites. We are committed to delivering exceptional experiences and lasting value to our clients.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Optimized Page Speed',
+        description:
+          'CraftinWeb prioritizes optimizing page speed, which significantly impacts organic search ranking, improves user experience (UI/UX), and increases conversion rates for your website.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Search Engine Optimization (SEO)',
+        description:
+          "CraftinWeb specializes in Search Engine Optimization (SEO) to enhance your website's visibility, drive organic traffic, and reach a wider audience. Let us elevate your online presence with effective SEO strategies.",
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Innovation and Collaboration',
+        description:
+          'CraftinWeb fosters a culture of innovation and collaboration, welcoming new ideas and contributions from clients and partners. Together, we create dynamic and engaging web experiences that set you apart from the competition.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** 
+
+  <Stats
+    stats={[
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Stars', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
+      { title: 'Users', amount: '48.4K' },
+    ]}
+  />
+    -->
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="OUR APPROACH"
+    title="CraftinWeb: Your Partner in Digital Success!"
+    items={[
+      {
+        title: 'Customized Solutions for Your Needs',
+        description:
+          'We tailor our services to fit your unique requirements, ensuring that you get exactly what you need to achieve your goals.',
+      },
+      {
+        title: 'Expertise and Innovation',
+        description:
+          'Our team of skilled professionals combines expertise with innovation to deliver cutting-edge solutions that set you apart from the competition.',
+      },
+      {
+        title: 'Responsive Customer Support',
+        description:
+          "We're here for you every step of the way, providing prompt and responsive customer support to address any questions or concerns you may have.",
+      },
+      {
+        title: 'Transparent Communication',
+        description:
+          'We believe in open and transparent communication, keeping you informed throughout the process and ensuring that your needs are always our top priority.',
+      },
+    ]}
+    image={{
+      src: 'https://files.oaiusercontent.com/file-iRcY4qWMbJGgULIqhX2QO3uC?se=2024-04-01T17%3A03%3A19Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3D0d199590-23fd-42f1-951a-a24f7d0ffbda.webp&sig=JTi6kg1zFQm3rj5K0MZZtHes%2BY1HmvbUmh3/8wTdXFo%3D',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Your Success is Our Mission</h3>
+      Partner with us to unlock your full potential in the digital world.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Explore More Content on Our Blog"
+    information={`Our blog is filled with useful information to enhance your understanding of web development.
+                  Each article covers topics relevant to website creation and maintenance, providing practical insights and tips.
+                  Dive in to discover valuable resources that will empower you in managing your website effectively.
+                  Thank you for choosing CraftinWeb!`}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Ready to supercharge your projects?"
+    subtitle="Choose one of our tailored packages and unlock the full potential of your projects today."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Explore Packages',
+        href: '/pricing',
+      },
+    ]}
+  />
+</Layout>
